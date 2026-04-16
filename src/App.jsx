@@ -287,13 +287,21 @@ export default function App() {
                     <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> CPA (Active License)
                   </span>
                   <span className="hidden sm:inline text-zinc-700">•</span>
-                  <span className="flex items-center gap-2">PwC M&A, 5 Years</span>
+                  <span className="flex items-center gap-2 text-white">
+                    <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> PwC M&A, 5 Years
+                  </span>
                   <span className="hidden sm:inline text-zinc-700">•</span>
-                  <span className="flex items-center gap-2">Hamilton Zanze Acquisitions, 3 Years</span>
+                  <span className="flex items-center gap-2 text-white">
+                    <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> Hamilton Zanze Acquisitions, 3 Years
+                  </span>
                   <span className="hidden lg:inline text-zinc-700">•</span>
-                  <span className="flex items-center gap-2">Director of RE, $65M+ Family Office</span>
+                  <span className="flex items-center gap-2 text-white">
+                    <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> Director of RE, $65M+ Family Office
+                  </span>
                   <span className="hidden sm:inline text-zinc-700">•</span>
-                  <span className="flex items-center gap-2">Owner/Operator, 8 Units</span>
+                  <span className="flex items-center gap-2 text-white">
+                    <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> Owner/Operator, 8 Units
+                  </span>
                 </div>
               </div>
             </FadeInSection>
