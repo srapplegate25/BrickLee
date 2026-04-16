@@ -311,8 +311,6 @@ export default function App() {
           <div className="lg:col-span-5 order-1 lg:order-2">
             <FadeInSection delay={200}>
               <div className="relative max-w-md mx-auto lg:max-w-full">
-                {/* Copper Accent Block */}
-                <div className="absolute inset-0 bg-[#c27a41] translate-x-4 translate-y-4 rounded-sm opacity-20"></div>
                 <img 
                   src="/Sam_Applegate_Headshot.jpg" 
                   onError={(e) => {
