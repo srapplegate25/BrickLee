@@ -10,11 +10,7 @@ const BRAND_COPPER = '#c27a41';
 const BRAND_COPPER_HOVER = '#a66533';
 
 // ============================================================
-// FORMSPREE SETUP:
-// 1. Sign up at https://formspree.io (free)
-// 2. Create a new form → verify sam@coyotesp.com as destination
-// 3. Copy your form ID (looks like: xdkoabcd or mayvrqeb)
-// 4. Replace "YOUR_FORM_ID" below with your actual ID
+// FORMSPREE: Live form submissions → sam@coyotesp.com
 // ============================================================
 const FORMSPREE_FORM_ID = "xyklkape";
 
@@ -127,17 +123,17 @@ export default function App() {
           </button>
 
           {/* Credential Strip */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm font-medium text-zinc-500">
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 text-sm font-medium text-zinc-500">
             <div className="flex items-center gap-2">
-              <span style={{ color: BRAND_COPPER }}>●</span> PwC Veteran
+              <span style={{ color: BRAND_COPPER }}>●</span> Licensed CPA
             </div>
-            <div className="hidden md:block text-zinc-800">•</div>
+            <div className="hidden lg:block text-zinc-800">•</div>
+            <div className="flex items-center gap-2">
+              <span style={{ color: BRAND_COPPER }}>●</span> Ex-PwC
+            </div>
+            <div className="hidden lg:block text-zinc-800">•</div>
             <div className="flex items-center gap-2">
               <span style={{ color: BRAND_COPPER }}>●</span> $65M+ Under Management
-            </div>
-            <div className="hidden md:block text-zinc-800">•</div>
-            <div className="flex items-center gap-2">
-              <span style={{ color: BRAND_COPPER }}>●</span> Active Property Owner
             </div>
           </div>
         </div>
@@ -263,8 +259,69 @@ export default function App() {
         </div>
       </section>
 
+      {/* 4.5 MEET THE FOUNDER */}
+      <section className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Text Content */}
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            <FadeInSection>
+              <span style={{ color: BRAND_COPPER }} className="uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
+                Meet the Founder
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+                I'm Sam Applegate. I built BrickLee for the operator who's ready for institutional books.
+              </h2>
+              <div className="text-lg text-zinc-400 leading-relaxed mb-10 space-y-6">
+                <p>
+                  I'm a CPA who spent five years at PwC and three years at Hamilton Zanze, a San Francisco-based multifamily owner operator, where I worked on over $2B in acquisitions. Today I serve as Director of Real Estate for a family office managing $65M+ in assets, and I personally own and operate rental properties. I spent a decade learning from the best and built BrickLee so operators without institutional scale can still have institutional books.
+                </p>
+                <p>
+                  I built BrickLee because my own portfolio needed it. I couldn't find a bookkeeper who truly understood real estate. They've never closed an acquisition, negotiated a lease, managed a tenant turnover, or stared at a DSCR covenant wondering if this month's collections will cover it. They know debits and credits. They don't know the business those debits and credits are supposed to describe. So I built the back office I wished existed: institutional systems, priced for the operator who's too big for Stessa but too small for a full-time controller. Every system we run for clients, I run on my own portfolio first.
+                </p>
+              </div>
+
+              {/* Credentials Row */}
+              <div className="border-t border-zinc-800/80 pt-8">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-sm font-medium text-zinc-300">
+                  <span className="flex items-center gap-2 text-white">
+                    <CheckCircle2 size={16} style={{ color: BRAND_COPPER }} /> CPA (Active License)
+                  </span>
+                  <span className="hidden sm:inline text-zinc-700">•</span>
+                  <span className="flex items-center gap-2">PwC M&A, 5 Years</span>
+                  <span className="hidden sm:inline text-zinc-700">•</span>
+                  <span className="flex items-center gap-2">Hamilton Zanze Acquisitions, 3 Years</span>
+                  <span className="hidden lg:inline text-zinc-700">•</span>
+                  <span className="flex items-center gap-2">Director of RE, $65M+ Family Office</span>
+                  <span className="hidden sm:inline text-zinc-700">•</span>
+                  <span className="flex items-center gap-2">Owner/Operator, 8 Units</span>
+                </div>
+              </div>
+            </FadeInSection>
+          </div>
+
+          {/* Image Content */}
+          <div className="lg:col-span-5 order-1 lg:order-2">
+            <FadeInSection delay={200}>
+              <div className="relative max-w-md mx-auto lg:max-w-full">
+                {/* Copper Accent Block */}
+                <div className="absolute inset-0 bg-[#c27a41] translate-x-4 translate-y-4 rounded-sm opacity-20"></div>
+                <img 
+                  src="/Sam_Applegate_Headshot.jpg" 
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800";
+                  }}
+                  alt="Sam Applegate, Founder of BrickLee" 
+                  className="relative z-10 w-full h-auto aspect-[4/5] object-cover rounded-sm border border-zinc-800 shadow-2xl"
+                />
+              </div>
+            </FadeInSection>
+          </div>
+        </div>
+      </section>
+
       {/* 5. SERVICES */}
-      <section id="services" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="services" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-zinc-800/30">
         <FadeInSection>
           <div className="mb-16 md:mb-20 md:text-center">
             <span style={{ color: BRAND_COPPER }} className="uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
